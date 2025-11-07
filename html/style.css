@@ -1,12 +1,8 @@
-﻿//*body color*//
+﻿
 body{
 	background-color:beige;
 }
-//*filter*//
-.aside{
-	float:left;
-}
-//*heading*//
+
 h1{
 	text-align:center;
 	font-family:Garamond;
@@ -16,12 +12,12 @@ h2{
 	text-align:center;
 }
 
-//*marquee*//
+
    marquee{
 	font-size:large;
 	font-family:"Britannic Bold";
 }
-//*image text*//
+
 .head{
 position: absolute;
 	left:20px;
@@ -32,7 +28,7 @@ position: absolute;
     font-family:"Yu Gothic Light";
 	
 }
-//*slogan*//
+
 .heading{
 	font-style:italic;
 	text-align:center;
@@ -142,10 +138,17 @@ p{
     #next {
       right: 10px;
     }
- //*featured properties*//
+
 h2{
 	font-family:Garamond;
 }	
+h3{
+	text-align:center;
+	font-family:Garamond;
+	font-size:xx-large;
+	text-transform:capitalize;
+	font-weight:bold;
+}
 
 .container{
 	display:grid;
@@ -154,228 +157,76 @@ h2{
 	padding:10px;
 	}
 .container>div{
-	border:1px solid black;
+	border:2px solid white;
 	padding:10px;
 	text-align:center;
-}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	.
+}
+.img1 {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.img1 h4 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  color: #fff;
+  font-size: 18px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  transform: translateY(100%);
+  transition: 0.4s ease;
+}
+.img1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+.img1:hover img {
+  filter: brightness(50%) blur(4px);
 }
 
+.img1:hover h4 {
+  transform: translateY(0);
+}
+.img2 {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.img2 h4 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  color: red;
+  font-size: 18px;
+  background:black;
+  backdrop-filter: blur(5px);
+  transform: translateY(100%);
+  transition: 0.4s ease;
+}
+.img2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+.img2:hover img {
+  filter: brightness(50%) blur(4px);
+}
+
+.img2:hover h4 {
+  transform: translateY(0);
+}
 
