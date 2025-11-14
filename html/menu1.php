@@ -4,7 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Menu with Submenu</title>
+<script>
+function myfunction()
+{
+  window.location.href = "panel/loginfile.php";
+   }
+
+</script>
 <style>
+button{
+	color:black;
+	background-color:beige;
+	float:right;
+	padding:10px;
+	margin-left:60%;
+	
+	
+}
 body 
 {
   font-family: Arial, sans-serif;
@@ -71,9 +87,9 @@ nav ul li:hover ul
     <li>
       <a href="#">company&emsp;&nabla;</a>
       <ul>
-        <li><a href="#">director</a></li>
-        <li><a href="#">location</a></li>
-        <li><a href="#">site office</a></li>
+        <li><a href="director.php">director</a></li>
+        <li><a href="location.php">location</a></li>
+        <li><a href="siteoffice.php">site office</a></li>
       </ul>
     </li>
     <li>
@@ -84,7 +100,10 @@ nav ul li:hover ul
       </ul>
     </li>
     <li><a href="#">Contact</a></li>
+      <button onclick="myfunction()">login</button>
+
   </ul>
-</nav>
+ 
+ </nav>
 </body>
 </html>

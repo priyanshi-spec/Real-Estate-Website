@@ -39,6 +39,14 @@ table a{
     color:#0A083B;
     text-decoration:none;
 }
+img1{
+border:2px solid;
+	border-radius:50px;
+	padding-bottom:1px;
+	 height:80px;
+	  width:60px;
+		
+}
 h4{
 	
 	
@@ -104,7 +112,7 @@ p{
                        <a href="https://instagram.com" class="icon"><i class="fab fa-instagram"></i></a>
                        	<a href="https://youtube.com" class="icon"><i class="fab fa-youtube"></i></a>
                   		  <a href="https://linkedin.com" class="icon"><i class="fab fa-linkedin-in"></i></a>
-                    </div> 
+                  		                     </div> 
             </td>
         </tr>
     </table>

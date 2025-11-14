@@ -14,9 +14,9 @@ h2{
 
 
    marquee{
-	font-size:large;
-	font-family:"Britannic Bold";
-}
+	font-size:x-large;
+	font-family:Garamond;
+	}
 
 .head{
 position: absolute;
@@ -125,7 +125,7 @@ p{
       border: none;
       padding: 10px 20px;
       cursor: pointer;
-      border-radius: 50%;
+      border-radius:50%;
     }
       .btn:hover {
       background: rgba(0, 0, 0, 0.8);

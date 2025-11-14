@@ -20,9 +20,6 @@
 
 
 <div class="head">
-<aside>
-<h6 class="aside">left</h6>
-</aside>
 
 <h2>HOUSE AND PROPERTIES FOR LIVING A COMFORTABLE LIFE, INVESTEMENT PURPOSE <br> ONLY ON HOUSE & LIFE OFFICIAL WEBSITE </h2>
 </div>
@@ -33,15 +30,24 @@
 <article>
 </article>
 <figure>
-	<img src="../images/estate.jpg" height="400px" width="100%">
+	
 	
 	 <div class="slider">
     <div class="slides" id="slides">
-      <div class="slide"><img src="../images/1.jpg" Height="400" width="1000" alt="Image 2"></div>
-      <div class="slide"><img src="../images/2.jpg" Height="400" width="1000" alt="Image 3"></div>
-       <div class="slide"><img src="../images/3.jpg" Height="400" width="1000" alt="Image 4"></div>
-        <div class="slide"><img src="../images/4.jpg" Height="400" width="1000" alt="Image 5"></div>
-      	<div class="slide"><img src="../images/5.jpg" Height="400" width="1000" alt="Image 6"></div>
+      <div class="slide"><img src="../images/1.jpg" Height="400" width="1000" alt="Image 1"></div>
+      <div class="slide"><img src="../images/2.jpg" Height="400" width="1000" alt="Image 2"></div>
+       <div class="slide"><img src="../images/3.jpg" Height="400" width="1000" alt="Image 3"></div>
+        <div class="slide"><img src="../images/4.jpg" Height="400" width="1000" alt="Image 4"></div>
+      	<div class="slide"><img src="../images/5 - Copy.jpg" Height="400" width="1000" alt="Image 5"></div>
+      	 <div class="slide"><img src="../images/6.jpg"Height="400" width="1000" alt="Image 6"></div>
+        <div class="slide"><img src="../images/7.jpg" Height="400" width="1000" alt="Image 7"></div>
+      	<div class="slide"><img src="../images/8.jpg" Height="400" width="1000" alt="Image 8"></div>
+      		<div class="slide"><img src="../images/9.jpg" Height="400" width="1000" alt="Image 9"></div>
+
+
+
+
+
 
     </div>
 
@@ -93,12 +99,11 @@
 <h4>3 BHK House<br>location:grand star emperial,australia<br>price:50,0000</h4>
 </div>
 </div>
+<h2>Become a Seller</h2>
+<?php include '../upload.php';?>
 </figure>
 </section>
 </main>
-<?php include 'upload.php';?>
-<?php include 'loginfile.php';?>
-
 <footer>
 <?php include 'footer1.php';?>
 </footer>
