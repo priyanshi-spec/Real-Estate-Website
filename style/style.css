@@ -89,58 +89,62 @@ p{
 	margin-top: 1%;
 	color:white;
 }
- .slider {
-      width: 150%;
-      margin-top:5%;
-      max-width: 1250px;
-      max-height:900px;
-      position: relative;
-      overflow: hidden;
-      border:thin solid navy;
-      border-radius: 20px;
-    }
+.slider {
+    width: 100%;
+    max-width: 1250px;
+    margin: 5% auto;
+    max-height: 900px;
+    position: relative;
+    overflow: hidden;
+    border: thin solid navy;
+    border-radius: 20px;
+}
 
-    .slides {
-      display: flex;
-      transition: transform 0.6s ease;
-    }
+.slides {
+    display: flex;
+    transition: transform 0.6s ease;
+}
 
-    .slide {
-      min-width: 100%;
-      transition: 0.5s;
-    }
+.slide {
+    min-width: 100%;
+}
 
-    .slide img {
-      width: 100%;
-      display: block;
-    }
+.slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
 
-        
-    .btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius:50%;
-    }
-      .btn:hover {
-      background: rgba(0, 0, 0, 0.8);
-    }
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.2s;
+}
 
-    #prev {
-      left: 10px;
-    }
+.btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
 
-    #next {
-      right: 10px;
-    }
+#prev { left: 20px; }
+#next { right: 20px; }
 
+   
 h2{
 	font-family:Garamond;
+	
 }	
 h3{
 	text-align:center;
@@ -228,5 +232,8 @@ h3{
 
 .img2:hover h4 {
   transform: translateY(0);
+}
+.sell{
+	font-size:xx-large;
 }
 

@@ -4,11 +4,66 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Untitled 1</title>
+<style>
+
+h3{
+	font-family:Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	text-align:justify;
+	padding:10px;
+	padding-left:40px;
+}
+</style>
 </head>
 
 <body>
 <?php include 'menu1.php';?>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<h1>office address</h1>
+<h3>United States<br>
+
+7429 Willow Creek Drive
+Springfield, Illinois 62704
+USA<br>
+</h3>
+<h3>
+United Kingdom<br>
+
+18 Maplewood Crescent
+Bristol BS5 8RJ
+United Kingdom<br>
+</h3>
+<h3>
+Australia<br>
+
+25 Southern Cross Avenue
+Adelaide SA 5000
+Australia<br>
+</h3>
+<h3>
+
+Canada<br>
+
+910 Lakeshore Trail
+Vancouver, BC V6K 3Y2
+Canada<br>
+</h3>
+<h3>
+Japan<br>
+
+3-12-8 Sakura Street
+Shibuya, Tokyo 150-0002
+Japan<br>
+
+</h3>
+
+<h3>
+india<br>
+
+ dearstone line number 4 
+delhi ,UP
+india<br>
+
+</h3>
+
 </body>
 
 </html>

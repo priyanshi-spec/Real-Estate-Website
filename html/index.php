@@ -5,12 +5,12 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Untitled 1</title>
 <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style/style.css">
 
 </head>
 
 <body>
-<?php include 'menu1.php';?>
+<?php include 'menubar/menu1.php';?>
 <header>
 	<h1>HOUSE & LIFE</h1>
 		<p class="heading">Dream Homes Delivered.</p>
@@ -99,8 +99,8 @@
 <h4>3 BHK House<br>location:grand star emperial,australia<br>price:50,0000</h4>
 </div>
 </div>
-<h2>Become a Seller</h2>
-<?php include '../upload.php';?>
+<h2 class="sell">Sell your house online.</h2>
+<?php include 'panel/user.php';?>
 </figure>
 </section>
 </main>
