@@ -57,57 +57,18 @@
   		  		
 
 <h3>Featured Properties</h3>
-<div class="container">
-<div class="img1">
-<img src="../images/feature1.jpg" alt="house" width="600" height="400">
-<h4>1 BHK House<br>location:street 4 washington U.S<br>price:50,0000</h4>
-</div>
-<div class="img1">
-<img src="../images/feature2.jpg" alt="house" width="600" height="400">
-<h4>2 BHK House<br>location:house 603 galaxy gardens homes,L.A <br>price:60,0000</h4>
-</div>
-<div class="img1">
-<img src="../images/feature3.jpg" alt="house" width="600" height="400">
-<h4>2 BHK House<br>location:house 08 new apartment U.S.A<br>price:40,0000</h4>
-</div>
-<div class="img1">
-<img src="../images/feature5.jpg" alt="house" width="600" height="400">
-<h4>2 BHK House<br>location:terre housey colony U.S<br>price:66,0000</h4>
-</div>
-<div class="img1">
-<img src="../images/feature6.jpg" alt="house" width="600" height="400">
-<h4>3 BHK House<br>location:house 2 stephen road, U.A.E<br>price:70,0000</h4>
-</div>
-<div class="img1">
-<img src="../images/feature7.jpg" alt="house" width="600" height="400">
-<h4>4 BHK House<br>location:royal world, navi mumbai, India<br>price:85,0000</h4>
-</div>
-<div class="img1">
-<img src="../images/feature8.jpg" alt="house" width="600" height="400">
-<h4>2 BHK House<br>location:lane 201 the grandstone London<br>price:74,0000</h4>
-</div>
-<div class="img2">
-<img src="../images/feature9.jpg" alt="house" width="600" height="400">
-<h4>SOLD OUT</h4>
-</div>
-<div class="img1">
-<img src="../images/feature10.jpg" alt="house" width="600" height="400">
-<h4>3 BHK House<br>location:home 12 huishi, tokyo japan<br>price:45,0000</h4>
-</div>
-<div class="img1">
-<img src="../images/feature11.jpg" alt="house" width="600" height="400">
-<h4>3 BHK House<br>location:grand star emperial,australia<br>price:50,0000</h4>
-</div>
-</div>
+<?php include 'panel/uploaded.php'; ?>
 <h2 class="sell">Sell your house online.</h2>
 <?php include 'panel/user.php';?>
 </figure>
+
 </section>
 </main>
 <footer>
 <?php include 'footer1.php';?>
 </footer>
 <script src="../javascript/estate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

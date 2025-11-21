@@ -1,26 +1,111 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta charset="UTF-8">
 <title>Our Company History</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Georgia", serif;
+        background-image:url('estate.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: #2b2b2b;
+    }
+
+    .history-wrapper {
+        max-width: 900px;
+        margin: 50px auto;
+        background: rgba(255,255,255,0.8);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        position: relative;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0B092A;
+        font-family: "Times New Roman", serif;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        color:#0B092A!important;
+    }
+
+    
+
+    .year-title {
+        font-size: 26px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #5a3c0c;
+    }
+
+</style>
 </head>
 
 <body>
+
 <?php include 'menu1.php';?>
-<h1>Our Company History</h1>
 
-Founded in 1998, House & Life began as a small, family-inspired venture with a simple mission: to redefine the way people experience real estate. What started as a two-person operation in a modest office on the outskirts of Brookdale City has grown into one of the region’s most trusted and innovative property development companies. From the very beginning, our focus has been on building meaningful communities rather than just constructing properties—a philosophy that continues to guide us today.
+<div class="history-wrapper">
 
-During the early years, House & Life primarily specialized in small residential projects, helping first-time homebuyers find reliable, affordable housing. Our dedication to quality craftsmanship and customer satisfaction quickly earned us recognition, allowing us to expand our portfolio. By 2005, the company had successfully completed its first major housing complex, “Brookdale Heights,” which became a landmark project and set new standards for residential living in the city.
 
-As the real estate market evolved, so did we. Between 2008 and 2015, House & Life embraced modernization and sustainability, integrating eco-friendly building materials, smart home features, and energy-efficient designs into our projects. This period marked a significant milestone as we expanded into commercial real estate, launching our first mixed-use development that combined retail, office spaces, and premium apartments. This project strengthened our reputation for delivering designs that blend functionality, aesthetics, and long-term value.
+    <h1>Our Company History</h1>
 
-By 2018, House & Life had grown to a team of over 100 passionate professionals, each bringing specialized expertise in architecture, engineering, project management, marketing, and customer support. Together, we continued to innovate, launching luxury residential projects, gated communities, and commercial hubs that transformed several neighborhoods into vibrant, thriving environments.
+    <p>
+        Founded in 1998, House & Life began as a small, family-inspired venture with a simple mission:
+        to redefine the way people experience real estate. What started as a two-person operation in a 
+        modest office on the outskirts of Brookdale City has grown into one of the region’s most trusted 
+        and innovative property development companies.
+    </p>
 
-Today, with more than two decades of experience, House & Life has completed over 75 residential and commercial projects across the region. Our legacy is built on trust, transparency, and a deep commitment to excellence. As we look toward the future, we remain dedicated to pushing boundaries, exploring sustainable development practices, and shaping spaces where individuals, families, and businesses can truly flourish.
+    <div class="year-title">1998 — The Beginning</div>
+    <p>
+        In the early years, House & Life specialized in small residential projects, helping first-time 
+        homebuyers find reliable and affordable housing. With dedication and quality craftsmanship, our 
+        reputation grew quickly.
+    </p>
 
-What began as a humble dream has grown into a trusted name in real estate—one that continues to build not only structures, but lifelong relationships and strong communities. And as we embark on the next chapter of our journey, our vision remains clear: to create exceptional properties that inspire, empower, and elevate the lives of those we serve.
+    <div class="year-title">2005 — First Milestone</div>
+    <p>
+        By 2005, the company completed its first landmark project, “Brookdale Heights,” a major housing 
+        complex that elevated living standards for the city and solidified our position in the industry.
+    </p>
+
+    <div class="year-title">2008 – 2015 — Modernization Era</div>
+    <p>
+        As the market evolved, we embraced innovation—integrating smart home features, eco-friendly 
+        materials, and energy-efficient designs. During this period, we expanded into commercial real 
+        estate, launching our first mixed-use development.
+    </p>
+
+    <div class="year-title">2018 — A Growing Family</div>
+    <p>
+        By 2018, House & Life had grown to a team of over 100 dedicated professionals. Together, we 
+        shaped neighborhoods and transformed communities with luxury residences and commercial hubs.
+    </p>
+
+    <div class="year-title">Today — A Legacy of Excellence</div>
+    <p>
+        Today, with over 75 completed projects, House & Life continues to build spaces that inspire,
+        empower, and uplift lives. Our story is one of passion, innovation, and unwavering commitment
+        to the communities we serve.
+    </p>
+
+</div>
+
+<?php include "../footer1.php"; ?> 
+
 </body>
-
 </html>

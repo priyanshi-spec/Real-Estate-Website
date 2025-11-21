@@ -76,18 +76,18 @@ p{
                 
                <a href="#about us"><i class='fas fa-caret-right'></i>&emsp;about us</a><br>
                 <a href="#contact us"><i class='fas fa-caret-right'></i>&emsp;contact us</a><br>
-                <a href="#courses"><i class='fas fa-caret-right'></i>&emsp;courses</a><br>
+                <a href="#courses"><i class='fas fa-caret-right'></i>&emsp;houses</a><br>
                 <a href="#blog"><i class='fas fa-caret-right'></i>&emsp;blog</a><br>
-                <a href="#student"><i class='fas fa-caret-right'></i>&emsp;student</a><br>
+                <a href="#student"><i class='fas fa-caret-right'></i>&emsp;members</a><br>
                 
             </td>
             <td class="foot2"  width="25%" style="padding-bottom:170px">
                 <h4>quick link</h4>
                  <a href="#about us"><i class='fas fa-caret-right'></i>&emsp;about us</a><br>
                 <a href="#contact us"><i class='fas fa-caret-right'></i>&emsp;contact us</a><br>
-                <a href="#courses"><i class='fas fa-caret-right'></i>&emsp;courses</a><br>
+                <a href="#courses"><i class='fas fa-caret-right'></i>&emsp;office</a><br>
                 <a href="#blog"><i class='fas fa-caret-right'></i>&emsp;blog</a><br>
-                <a href="#student"><i class='fas fa-caret-right'></i>&emsp;student</a><br>
+                <a href="#student"><i class='fas fa-caret-right'></i>&emsp;location</a><br>
                 
 
             </td>

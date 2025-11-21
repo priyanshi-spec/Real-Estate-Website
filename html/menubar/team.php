@@ -1,64 +1,86 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Untitled 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+
+       
+        background-image: url('estate.jpg');
+        background-size: cover;           
+        background-repeat: no-repeat;    
+        background-position: center;      
+        background-attachment: fixed;    
+    }
+
+  
+    .team-section {
+        width: 90%;
+        max-width: 1000px;
+
+        margin: 50px auto;
+        padding: 30px;
+
+        background: white;                
+        border-radius: 14px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+        text-align: center;
+    }
+
+    
+    .team-photo {
+        width: 100%;
+        max-width: 820px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+
+        box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+    }
+
+    .team-text h2 {
+        font-size: 34px;
+        color: #0B092A;
+        font-weight: 700;
+        margin-bottom: 14px;
+    }
+
+    .team-text p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.7;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+</style>
 </head>
 
 <body>
-<nav>
-  <ul>
-    <li><a href="#">home</a></li>
-    <li>
-      <a href="#">company&emsp;&nabla;</a>
-      <ul>
-        <li><a href="menubar/director.php"></a></li>
-        <li><a href="location.php">location</a></li>
-        <li><a href="siteoffice.php">site office</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">about &emsp; &nabla;</a>
-      <ul>
-        <li class="active"><a href="team.php">Our Team</a></li>
-        <li><a href="history.php">our history</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Contact</a></li>
-      <button onclick="myfunction()">login</button>
 
-  </ul>
- 
- </nav>
+<?php include 'menu1.php'; ?>
 
+<div class="team-section">
+    <img src="team.jpg" alt="Our Team" class="team-photo">
 
+    <div class="team-text">
+        <h2>Meet Our Dedicated Team</h2>
+        <p>
+            Our team is built on professionalism, trust, and a strong collaborative spirit.
+            Every member brings unique skills to the table, helping us deliver the best
+            experience for our clients. Together, we work with commitment, passion,
+            and a shared vision to achieve excellence.
+        </p>
+    </div>
+</div>
 
-
-<?php include 'menu1.php';?>
-
-<h1>Our Team</h1>
-
-At house and life, our team is the driving force behind everything we do. We are a group of dedicated, hardworking professionals who combine creativity, discipline, and expertise to deliver outstanding results for our clients. Each member of our team brings unique strengths that contribute to a strong, collaborative work environment where innovation thrives. With a shared commitment to excellence, we work together to turn challenges into opportunities and ideas into successful outcomes.
-
-Key Features of Our Team Members
-
-Highly skilled in their respective fields
-
-Strong problem-solving and analytical abilities
-
-Excellent communication and teamwork skills
-
-Adaptable, proactive, and results-driven
-
-Passionate about delivering high-quality work
-
-Continual learners who embrace new technologies
-
-Employee Strength<br>
-
-Total Employees: 150+ dedicated team members
+<?php include "../footer1.php"; ?>
 
 </body>
-
 </html>
