@@ -92,7 +92,7 @@ if (!isset($_SESSION['username'])) {
 <h2>Admin Panel</h2>
 <a href="dashboard.php">Dashboard</a>
 <a href="show.php">Show All</a>
-<a href="upload.php">Upload</a>
+<a href="uploaddetails.php">Upload</a>
 <a href="logout.php">Logout</a>
 </div>
 
