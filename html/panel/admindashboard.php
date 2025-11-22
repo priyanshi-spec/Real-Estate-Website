@@ -88,34 +88,75 @@ if (!isset($_SESSION['username'])) {
 </head>
 
 <body>
-
-<!-- Sidebar -->
 <div class="sidebar">
-    <h2>Admin Panel</h2>
-    <a href="dashboard.php">Dashboard</a>
-    <a href="#">Users</a>
-    <a href="#">Products</a>
-    <a href="#">Reports</a>
-    <a href="logout.php">Logout</a>
+<h2>Admin Panel</h2>
+<a href="dashboard.php">Dashboard</a>
+<a href="show.php">Show All</a>
+<a href="upload.php">Upload</a>
+<a href="logout.php">Logout</a>
 </div>
 
-<!-- Main Content -->
 <div class="content">
-    <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
-    <p>This is your admin dashboard.</p>
+<h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
 
-    <div class="cards">
-        <div class="card">Total Users: 120</div>
-        <div class="card">Orders: 50</div>
-        <div class="card">Revenue: &#8377;75,000</div>
-    </div>
+<div class="operation-box">
+<h2>CRUD Operations</h2>
 
-    <!-- Custom button -->
-    <button class="operation-btn" onclick="goToUpload()">
-        Upload Details
-    </button>
+<form method="POST">
+Enter ID:<br>
+<input type="text" name="id" required>
 
+<input type="submit" name="delete" value="Delete">
+<input type="submit" name="update" value="Update (change image)">
+<input type="submit" name="showall" value="Show All">
+</form>
+
+<?php
+$conn = new mysqli("localhost","root","","admindata");
+
+if(isset($_POST["delete"])){
+    $id = $_POST["id"];
+    $conn->query("DELETE FROM input WHERE id=$id");
+    echo "<p style='color:red;'>Record Deleted</p>";
+}
+
+if(isset($_POST["update"])){
+    echo "<script>window.location.href='update.php?id=".$_POST['id']."';</script>";
+}
+
+if(isset($_POST["showall"])){
+    echo "<script>window.location.href='show.php';</script>";
+}
+?>
+</div>
+
+</div>
+</body>
+<body>
+
+<div class="box">
+<h2>Upload Image</h2>
+
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="photo" required><br><br>
+<input type="submit" name="upload" value="Upload">
+</form>
+
+<?php
+$conn = new mysqli("localhost","root","","admindata");
+
+if(isset($_POST['upload'])){
+    $photo = $_FILES['photo']['name'];
+    $tmp = $_FILES['photo']['tmp_name'];
+
+    move_uploaded_file($tmp, "images/".$photo);
+
+    $conn->query("INSERT INTO input(photo) VALUES('$photo')");
+    echo "<p style='color:green;'>Uploaded Successfully!</p>";
+}
+?>
 </div>
 
 </body>
 </html>
+
