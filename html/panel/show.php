@@ -1,17 +1,19 @@
+
+
 <?php
-$conn = new mysqli("localhost", "root", "", "admindata");
+$conn = new mysqli("localhost", "root", "", "admin");
 
 if ($conn->connect_error) {
     die("Connection Failed: " . $conn->connect_error);
 }
 
-$result = $conn->query("SELECT * FROM input");
+$result = $conn->query("SELECT * FROM data");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>All Uploaded Images</title>
+    <title>All Properties</title>
     <style>
         body{
             font-family: Arial;
@@ -19,7 +21,7 @@ $result = $conn->query("SELECT * FROM input");
             background:#f2f2f2;
         }
         table{
-            width:60%;
+            width:80%;
             margin:auto;
             border-collapse:collapse;
             background:white;
@@ -54,18 +56,24 @@ $result = $conn->query("SELECT * FROM input");
 </head>
 <body>
 
-<h2 style="text-align:center;">All Uploaded Photos</h2>
+<h2 style="text-align:center;">All Uploaded Properties</h2>
 
 <table>
     <tr>
         <th>ID</th>
         <th>Photo</th>
+        <th>Type</th>
+        <th>Location</th>
+        <th>Status</th>
     </tr>
 
 <?php while($row = $result->fetch_assoc()) { ?>
     <tr>
         <td><?= $row['id']; ?></td>
         <td><img src="images/<?= $row['photo']; ?>"></td>
+        <td><?= $row['type']; ?></td>
+        <td><?= $row['location']; ?></td>
+        <td><?= $row['status']; ?></td>
     </tr>
 <?php } ?>
 

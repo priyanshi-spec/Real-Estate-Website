@@ -99,30 +99,30 @@ nav ul li:hover ul {
 
 <nav>
   
-  <img src="../../images/logo1.png" class="logo" alt="Logo">  
+ <img src="../images/logo1.png" class="logo">
 
   
   <ul>
-    <li><a href="home.php">home</a></li>
+    <li><a href="./menubar/home.php">home</a></li>
 
     <li>
       <a href="#">company&emsp;&nabla;</a>
       <ul>
-        <li><a href="director.php">director</a></li>
-        <li><a href="location.php">location</a></li>
-        <li><a href="siteoffice.php">site office</a></li>
+        <li><a href="./menubar/director.php">director</a></li>
+        <li><a href="./menubar/location.php">location</a></li>
+        <li><a href="./menubar/siteoffice.php">site office</a></li>
       </ul>
     </li>
 
     <li>
       <a href="#">about &emsp; &nabla;</a>
       <ul>
-        <li><a href="team.php">Our Team</a></li>
-        <li><a href="history.php">our history</a></li>
+        <li><a href="./menubar/team.php">Our Team</a></li>
+        <li><a href="./menubar/history.php">our history</a></li>
       </ul>
     </li>
 
-    <li><a href="contact.php">Contact</a></li>
+    <li><a href="./menubar/contact.php">Contact</a></li>
   </ul>
 
 

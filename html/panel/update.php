@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "admindata");
+$conn = new mysqli("localhost", "root", "", "admin");
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -11,7 +11,7 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 
 $id = intval($_GET['id']);
 
-$sql = "SELECT * FROM input WHERE id = $id";
+$sql = "SELECT * FROM data WHERE id = $id";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 0) {
@@ -29,10 +29,10 @@ if (isset($_POST['update'])) {
 
         move_uploaded_file($_FILES['photo']['tmp_name'], $target);
 
-        $updateQuery = "UPDATE input SET photo='$photo' WHERE id=$id";
+        $updateQuery = "UPDATE data SET photo='$photo' WHERE id=$id";
 
         if ($conn->query($updateQuery)) {
-            echo "<script>alert('Image updated successfully'); window.location='showall.php';</script>";
+            echo "<script>alert('Image updated successfully'); window.location='admindashboard.php';</script>";
         } else {
             echo "Error updating record: " . $conn->error;
         }
@@ -56,7 +56,7 @@ form {
     background: beige;
     border-radius: 8px;
 }
-input[type='file'], input[type='submit']{
+input[type=file], input[type=submit]{
     width: 100%;
     padding: 12px;
     margin-top: 12px;
