@@ -90,9 +90,12 @@ $conn = new mysqli("localhost", "root", "", "admin");
 
 <div class="sidebar">
 <h2>Admin Panel</h2>
-<a href="dashboard.php">Dashboard</a>
+<a href="admindashboard.php">Dashboard</a>
 <a href="show.php">Show All</a>
 <a href="logout.php">Logout</a>
+<a href="usershow.php">seller</a> 
+<a href="show_messages.php">Contact Messages</a>
+
 </div>
 
 <div class="content">

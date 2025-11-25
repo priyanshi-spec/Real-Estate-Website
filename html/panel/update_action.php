@@ -10,7 +10,7 @@ if(!empty($_FILES['photo']['name'])) {
     $tmp = $_FILES['photo']['tmp_name'];
     move_uploaded_file($tmp, "images/".$photo);
 
-    $update = "UPDATE users SET name='$name', email='$email', photo='$photo' WHERE id=$id";
+    $update = "UPDATE users  name='$name', email='$email', photo='$photo' WHERE id=$id";
 } else {
     $update = "UPDATE users SET name='$name', email='$email' WHERE id=$id";
 }

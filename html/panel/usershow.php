@@ -1,6 +1,7 @@
-<? php include 'dashboarddesign.php' ?>
+
+
 <?php
-$conn = new mysqli("localhost", "root", "", "admin");
+$conn = new mysqli("localhost", "root", "", "realdb");
 
 if ($conn->connect_error) {
     die("Connection Failed: " . $conn->connect_error);
@@ -55,24 +56,25 @@ $result = $conn->query("SELECT * FROM data");
 </head>
 <body>
 
-<h2 style="text-align:center;">All Uploaded Properties</h2>
+<h2 style="text-align:center;">user uploaded properties</h2>
 
 <table>
     <tr>
-        <th>ID</th>
-        <th>Photo</th>
-        <th>Type</th>
-        <th>Location</th>
-        <th>Status</th>
+        <th>name</th>
+        <th>email</th>
+        <th>contact</th>
+        <th>photo</th>
+        
     </tr>
 
 <?php while($row = $result->fetch_assoc()) { ?>
     <tr>
-        <td><?= $row['id']; ?></td>
-        <td><img src="images/<?= $row['photo']; ?>"></td>
-        <td><?= $row['type']; ?></td>
-        <td><?= $row['location']; ?></td>
-        <td><?= $row['status']; ?></td>
+        <td><?= $row['name']; ?></td>
+        <td><?= $row['email']; ?></td>
+        <td><?= $row['contact']; ?></td>
+         <td><img src="images/<?= $row['photo']; ?>"></td>
+
+        
     </tr>
 <?php } ?>
 

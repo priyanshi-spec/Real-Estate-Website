@@ -127,6 +127,62 @@ body {
 	width:30%;
 	height:40px;
 }
+.contact-form {
+    width: 70%;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    font-weight: bold;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 130px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background: #0B092A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact-form button:hover {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
 </style>
 </head>
 
@@ -172,18 +228,30 @@ body {
     <p>Trusted by 10,000+ Happy Families</p>
 </div>
 
-<form class="form">
-  <label>Name:</label>
-    <input type="text" name="name" required>
+<form class="contact-form" action="save_contact.php" method="POST">
+    <h2>Send Us a Message</h2>
 
-    <label>Email:</label>
-    <input type="email" name="email" required>
+    <div class="input-box">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+    </div>
 
-    <label>Contact:</label>
-    <input type="text" name="contact" required>
+    <div class="input-box">
+        <label>Email:</label>
+        <input type="email" name="email" required>
+    </div>
+
+    <div class="input-box">
+        <label>Contact Number:</label>
+        <input type="text" name="contact" required>
+    </div>
+
+    <div class="input-box">
+        <label>Your Message:</label>
+        <textarea name="message" required></textarea>
+    </div>
 
     <button type="submit" name="submit">Submit</button>
-
 </form>
 <div class="footer">
     <p>2025 House & Life &copy; All Rights Reserved</p>

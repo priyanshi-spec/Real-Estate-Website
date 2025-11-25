@@ -27,7 +27,7 @@
 <h1>Submitted Successfully!</h1>
 <p>Your property details have been saved.</p>
 
-<a href="show.php">View Submitted Details</a>
+<a href="usershow.php">View Submitted Details</a>
 <br><br>
 <a href="user.php">Submit Another Entry</a>
 
