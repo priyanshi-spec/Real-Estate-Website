@@ -77,12 +77,6 @@ $conn = new mysqli("localhost", "root", "", "admin");
             border-radius: 4px;
             margin-top: 10px;
         }
-
-        input[type=submit]:hover {
-            background: white;
-            color: black;
-            border: 1px solid black;
-        }
     </style>
 </head>
 
@@ -207,7 +201,7 @@ if(isset($_POST["showall"])){
 </div>
 
 
-<!-- UPLOAD SECTION -->
+<!-- FIXED UPLOAD SECTION -->
 <div class="form-box">
 <h2>Upload Property</h2>
 
@@ -217,10 +211,10 @@ if(isset($_POST["showall"])){
 <input type="file" name="photo" required>
 
 <label>Property Type:</label>
-<input type="text" name="type" placeholder="eg: 2BHK, Farmhouse" required>
+<input type="text" name="type" required>
 
 <label>Location:</label>
-<input type="text" name="location" placeholder="eg: Delhi, Mumbai" required>
+<input type="text" name="location" required>
 
 <label>Status:</label>
 <select name="status">
@@ -231,37 +225,39 @@ if(isset($_POST["showall"])){
 
 <input type="submit" name="upload" value="Upload">
 </form>
-<html>
-<body>
-
 
 <?php
 
+/* FIXED UPLOAD HANDLER */
 if(isset($_POST['upload'])){
 
-   
-    $photo = $_FILES['photo']['name'];
-    $tmp   = $_FILES['photo']['tmp_name'];
-
-
-    $uploadPath = _DIR_ . "/images/" . $photo;
-
-    move_uploaded_file($tmp, $uploadPath);
-
-    $type     = $_POST['type'];
+    $type = $_POST['type'];
     $location = $_POST['location'];
-    $status   = $_POST['status'];
+    $status = $_POST['status'];
 
-    $conn->query("INSERT INTO data (photo, type, location, status)
-                  VALUES ('$photo', '$type', '$location', '$status')");
+    $photo_name = $_FILES['photo']['name'];
+    $photo_tmp = $_FILES['photo']['tmp_name'];
 
-    echo "<p style='color:green;'>Uploaded Successfully!</p>";
+    $upload_path = __DIR__ . "/images/" . $photo_name;
+
+    if(move_uploaded_file($photo_tmp, $upload_path)){
+        
+        $sql = "INSERT INTO data (photo, type, location, status)
+                VALUES ('$photo_name', '$type', '$location', '$status')";
+
+        if($conn->query($sql)){
+            echo "<script>alert('Uploaded Successfully');</script>";
+        } else {
+            echo "<script>alert('Database Insert Failed');</script>";
+        }
+
+    } else {
+        echo "<script>alert('Image Upload Failed');</script>";
+    }
 }
+
 ?>
 
-
-</body>
-</html>
 </div>
 
 </div>
