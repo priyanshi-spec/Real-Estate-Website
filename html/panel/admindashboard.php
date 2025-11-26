@@ -109,7 +109,7 @@ Enter ID:<br>
 
 <?php
 
-/* DELETE */
+
 if(isset($_POST["delete"]))
 {
     $link = mysqli_connect("localhost","root","");
@@ -119,7 +119,6 @@ if(isset($_POST["delete"]))
     echo "Record Deleted";
 }
 
-/* UPDATE SHOW FORM */
 if(isset($_POST["update"]))
 {
     $link = mysqli_connect("localhost","root","");
@@ -193,7 +192,6 @@ if(isset($_POST["save_update"]))
     echo "<p style='color:green;'>Record Updated Successfully!</p>";
 }
 
-/* SHOW ALL */
 if(isset($_POST["showall"])){
     echo "<script>window.location.href='show.php';</script>";
 }
@@ -201,7 +199,6 @@ if(isset($_POST["showall"])){
 </div>
 
 
-<!-- FIXED UPLOAD SECTION -->
 <div class="form-box">
 <h2>Upload Property</h2>
 
@@ -228,7 +225,6 @@ if(isset($_POST["showall"])){
 
 <?php
 
-/* FIXED UPLOAD HANDLER */
 if(isset($_POST['upload'])){
 
     $type = $_POST['type'];
