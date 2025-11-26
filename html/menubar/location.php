@@ -45,6 +45,19 @@ body {
     border: 4px solid #0B092A;
     border-radius: 15px;
 }
+  .footer {
+    background: #0B092A;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer p {
+    opacity: .7;
+    margin: 0;
+}
+
 </style>
 
 </head>
@@ -64,7 +77,11 @@ body {
         referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 </div>
-<?php include '../footer1.php'; ?>
+<div class="footer">
+    <p>2025 House & Life &copy; All Rights Reserved</p>
+</div>
+
+
 
 </body>
 </html>

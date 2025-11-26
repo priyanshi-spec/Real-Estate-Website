@@ -52,8 +52,7 @@
     <input type="file" name="photo" accept="image/*" required>
 
     <button type="submit" name="submit">Submit</button>
-    <button type="submit" name="show">Show</button>
-
+    
 </form>
 </div>
 

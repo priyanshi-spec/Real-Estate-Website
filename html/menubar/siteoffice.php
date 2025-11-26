@@ -86,6 +86,18 @@
         color: #444;
         line-height: 1.55;
     }
+	  .footer {
+    background: #0B092A;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer p {
+    opacity: .7;
+    margin: 0;
+}
 
 </style>
 </head>
@@ -149,7 +161,9 @@
 
 </div>
 
-<?php include "../footer1.php"; ?> 
+<div class="footer">
+    <p>2025 House & Life &copy; All Rights Reserved</p>
+</div>
 
 </body>
 </html>

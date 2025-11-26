@@ -74,21 +74,19 @@ p{
             <td class="foot1"  width="25%" style="padding-bottom:170px"> 
                 <h4>house&life</h4>
                 
-               <a href="#about us"><i class='fas fa-caret-right'></i>&emsp;about us</a><br>
-                <a href="#contact us"><i class='fas fa-caret-right'></i>&emsp;contact us</a><br>
-                <a href="#courses"><i class='fas fa-caret-right'></i>&emsp;houses</a><br>
-                <a href="#blog"><i class='fas fa-caret-right'></i>&emsp;blog</a><br>
-                <a href="#student"><i class='fas fa-caret-right'></i>&emsp;members</a><br>
+               <a href="menubar/director.php"><i class='fas fa-caret-right'></i>&emsp;director</a><br>
+               <a href="menubar/siteoffice.php"><i class='fas fa-caret-right'></i>&emsp;office</a><br>
+                <a href="menubar/location.php"><i class='fas fa-caret-right'></i>&emsp;location</a><br>
+                <a href="menubar/team.php"><i class='fas fa-caret-right'></i>&emsp;members</a><br>
                 
             </td>
             <td class="foot2"  width="25%" style="padding-bottom:170px">
                 <h4>quick link</h4>
-                 <a href="#about us"><i class='fas fa-caret-right'></i>&emsp;about us</a><br>
-                <a href="#contact us"><i class='fas fa-caret-right'></i>&emsp;contact us</a><br>
-                <a href="#courses"><i class='fas fa-caret-right'></i>&emsp;office</a><br>
-                <a href="#blog"><i class='fas fa-caret-right'></i>&emsp;blog</a><br>
-                <a href="#student"><i class='fas fa-caret-right'></i>&emsp;location</a><br>
-                
+                 <a href="menubar/history.php"><i class='fas fa-caret-right'></i>&emsp;history</a><br>
+                <a href="menubar/contact.php"><i class='fas fa-caret-right'></i>&emsp;contact us</a><br>
+                <a href="panel/user.php"><i class='fas fa-caret-right'></i>&emsp;sell property</a><br>
+                <a href="termcondition.php"><i class='fas fa-caret-right'></i>&emsp;terms & conditions </a><br>
+                                
 
             </td>
             <td width="25%"style="padding-bottom:80px">
@@ -107,8 +105,6 @@ p{
             <td width="25%" style="padding-bottom:15%">
                 <h4>social links</h4><br><br><br>
                 <div class="social">
-                     <a href="https://twitter.com" class="icon"><i class="fab fa-x-twitter"></i></a>
-                      <a href="https://facebook.com" class="icon"><i class="fab fa-facebook-f"></i></a>
                        <a href="https://instagram.com" class="icon"><i class="fab fa-instagram"></i></a>
                        	<a href="https://youtube.com" class="icon"><i class="fab fa-youtube"></i></a>
                   		  <a href="https://linkedin.com" class="icon"><i class="fab fa-linkedin-in"></i></a>

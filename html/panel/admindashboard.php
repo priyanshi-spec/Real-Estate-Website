@@ -93,7 +93,7 @@ $conn = new mysqli("localhost", "root", "", "admin");
 <a href="admindashboard.php">Dashboard</a>
 <a href="show.php">Show All</a>
 <a href="logout.php">Logout</a>
-<a href="usershow.php">seller</a> 
+<a href="usershow.php">seller</a>
 <a href="show_messages.php">Contact Messages</a>
 
 </div>
@@ -101,7 +101,6 @@ $conn = new mysqli("localhost", "root", "", "admin");
 <div class="content">
 <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
 
-<!-- DELETE / UPDATE BOX -->
 <div class="form-box">
 <h2>Admin Operations</h2>
 
@@ -109,29 +108,103 @@ $conn = new mysqli("localhost", "root", "", "admin");
 Enter ID:<br>
 <input type="text" name="id" placeholder="Enter ID for Delete/Update">
 
-
 <input type="submit" name="delete" value="Delete">
 <input type="submit" name="update" value="Update">
 <input type="submit" name="showall" value="Show All">
 </form>
 
 <?php
-if(isset($_POST["delete"])){
+
+/* DELETE */
+if(isset($_POST["delete"]))
+{
+    $link = mysqli_connect("localhost","root","");
+    mysqli_select_db($link,"admin");
     $id = $_POST["id"];
-    $conn->query("DELETE FROM data WHERE id=$id");
-    echo "<p style='color:red;'>Record Deleted Successfully</p>";
+    mysqli_query($link,"DELETE FROM data WHERE id='$id'");
+    echo "Record Deleted";
 }
 
-if(isset($_POST["update"])){
-    echo "<script>window.location.href='update.php?id=".$_POST['id']."';</script>";
+/* UPDATE SHOW FORM */
+if(isset($_POST["update"]))
+{
+    $link = mysqli_connect("localhost","root","");
+    mysqli_select_db($link,"admin");
+
+    $r = $_POST["id"];
+
+    $res = mysqli_query($link, "SELECT * FROM data WHERE id='$r'");
+    $row = mysqli_fetch_assoc($res);
+
+    if(!$row){
+        echo "<p style='color:red;'>Invalid ID!</p>";
+        exit();
+    }
+    ?>
+
+    <h3>Update Record (ID: <?= $r ?>)</h3>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?= $r ?>">
+
+        <label>Photo:</label><br>
+        <input type="file" name="photo"><br><br>
+
+        <label>Property Type:</label><br>
+        <input type="text" name="type" value="<?= $row['type'] ?>"><br><br>
+
+        <label>Location:</label><br>
+        <input type="text" name="location" value="<?= $row['location'] ?>"><br><br>
+
+        <label>Status:</label><br>
+        <select name="status">
+            <option <?= ($row['status']=="Available"?"selected":"") ?>>Available</option>
+            <option <?= ($row['status']=="Sold"?"selected":"") ?>>Sold</option>
+            <option <?= ($row['status']=="Booked"?"selected":"") ?>>Booked</option>
+        </select><br><br>
+
+        <input type="submit" name="save_update" value="Save Changes">
+    </form>
+
+    <?php
 }
 
+if(isset($_POST["save_update"]))
+{
+    $link = mysqli_connect("localhost","root","");
+    mysqli_select_db($link,"admin");
+
+    $id = $_POST["id"];
+    $type = $_POST["type"];
+    $location = $_POST["location"];
+    $status = $_POST["status"];
+
+    $photo_sql = "";
+
+    if(!empty($_FILES["photo"]["name"])) {
+        $photo = $_FILES["photo"]["name"];
+        move_uploaded_file($_FILES["photo"]["tmp_name"], "images/".$photo);
+        $photo_sql = ", photo='$photo'";
+    }
+
+    $query = "UPDATE data SET 
+                type='$type',
+                location='$location',
+                status='$status'
+                $photo_sql
+              WHERE id='$id'";
+
+    mysqli_query($link, $query);
+
+    echo "<p style='color:green;'>Record Updated Successfully!</p>";
+}
+
+/* SHOW ALL */
 if(isset($_POST["showall"])){
     echo "<script>window.location.href='show.php';</script>";
 }
 ?>
 </div>
-
 
 
 <!-- UPLOAD SECTION -->
@@ -158,40 +231,37 @@ if(isset($_POST["showall"])){
 
 <input type="submit" name="upload" value="Upload">
 </form>
+<html>
+<body>
+
 
 <?php
+
 if(isset($_POST['upload'])){
 
+   
     $photo = $_FILES['photo']['name'];
-    $tmp = $_FILES['photo']['tmp_name'];
+    $tmp   = $_FILES['photo']['tmp_name'];
 
-    // Correct upload path
-    $uploadPath = __DIR__ . "/images/" . $photo;
 
-    // Make sure folder exists
-    if(!is_dir(__DIR__ . "/images/")){
-        mkdir(__DIR__ . "/images/", 0777, true);
-    }
+    $uploadPath = _DIR_ . "/images/" . $photo;
 
-    // Move file
-    if(move_uploaded_file($tmp, $uploadPath)) {
+    move_uploaded_file($tmp, $uploadPath);
 
-        $type = $_POST['type'];
-        $location = $_POST['location'];
-        $status = $_POST['status'];
+    $type     = $_POST['type'];
+    $location = $_POST['location'];
+    $status   = $_POST['status'];
 
-        // Insert data
-        $conn->query("INSERT INTO data (photo, type, location, status)
-                      VALUES ('$photo', '$type', '$location', '$status')");
+    $conn->query("INSERT INTO data (photo, type, location, status)
+                  VALUES ('$photo', '$type', '$location', '$status')");
 
-        echo "<p style='color:green;'>Uploaded Successfully!</p>";
-
-    } else {
-        echo "<p style='color:red;'>Image upload failed. Check folder permissions.</p>";
-    }
+    echo "<p style='color:green;'>Uploaded Successfully!</p>";
 }
-
 ?>
+
+
+</body>
+</html>
 </div>
 
 </div>

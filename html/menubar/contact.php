@@ -225,7 +225,7 @@ textarea {
 <div class="big-info">
     <h2>Visit Our Office Anytime</h2>
     <p>House & Life Real Estate Pvt. Ltd.</p>
-    <p>Trusted by 10,000+ Happy Families</p>
+    <p>Trusted by 5,000+ Happy Families</p>
 </div>
 
 <form class="contact-form" action="save_contact.php" method="POST">

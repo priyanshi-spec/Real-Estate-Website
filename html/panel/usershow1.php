@@ -7,17 +7,13 @@ if ($conn->connect_error) {
 
 $result = $conn->query("SELECT * FROM data");
 
-
-if(isset($_POST["delete_request"]))
+if(isset($_POST["delete"]))
 {
-    $name = $_POST["name"];   
-
-    $del = "DELETE FROM data WHERE name='$name'";
-    if($conn->query($del)){
-        echo "<p style='color:green;text-align:center;'>Record Deleted Successfully</p>";
-    } else {
-        echo "<p style='color:red;text-align:center;'>Delete Failed</p>";
-    }
+    $link = mysqli_connect("localhost","root","");
+    mysqli_select_db($link,"realdb");
+    $id = $_POST["name"];
+    mysqli_query($link,"DELETE FROM data WHERE name='$name'");
+    echo "Record Deleted";
 }
 
 ?>
@@ -52,30 +48,31 @@ if(isset($_POST["delete_request"]))
             width:120px;
             border-radius:5px;
         }
-        button{
-            padding:8px 12px;
-            background:#b30000;
+        a{
+            display:inline-block;
+            padding:10px 15px;
+            background:#0B092A;
             color:white;
-            border:none;
-            border-radius:4px;
-            cursor:pointer;
+            text-decoration:none;
+            border-radius:5px;
+            margin-bottom:20px;
         }
-        button:hover{
-            background:#e60000;
+        a:hover{
+            background:#16134A;
         }
     </style>
-</head>
+   </head>
 <body>
 
-<h2 style="text-align:center;">User Uploaded Properties</h2>
+<h2 style="text-align:center;">user uploaded properties</h2>
 
 <table>
     <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Contact</th>
-        <th>Photo</th>
-        <th>Action</th>
+        <th>name</th>
+        <th>email</th>
+        <th>contact</th>
+        <th>photo</th>
+        
     </tr>
 
 <?php while($row = $result->fetch_assoc()) { ?>
@@ -83,18 +80,13 @@ if(isset($_POST["delete_request"]))
         <td><?= $row['name']; ?></td>
         <td><?= $row['email']; ?></td>
         <td><?= $row['contact']; ?></td>
-        <td><img src="images/<?= $row['photo']; ?>"></td>
+         <td><img src="images/<?= $row['photo']; ?>"></td>
 
-        <td>
-            <form method="POST">
-                <input type="hidden" name="name" value="<?= $row['name']; ?>">
-                <button type="submit" name="delete_request">Delete</button>
-            </form>
-        </td>
+        
     </tr>
 <?php } ?>
 
 </table>
-<?php include 'db.php'; ?>
+
 </body>
 </html>

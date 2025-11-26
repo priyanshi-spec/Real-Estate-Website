@@ -39,7 +39,7 @@ button:hover {
     background: #0056b3;
 }
 
-/* Dashboard Layout */
+
 .sidebar {
     width: 200px;
     height: 100vh;
@@ -89,9 +89,9 @@ button:hover {
 <?php
 session_start();
 
-// Block access if not logged in
+
 if (!isset($_SESSION['admin'])) {
-    header("Location: index.php");
+    header("Location:dashboarddesign.php");
     exit();
 }
 ?>
