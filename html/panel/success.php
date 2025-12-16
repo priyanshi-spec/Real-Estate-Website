@@ -89,13 +89,36 @@ textarea {
 <a href="user.php">Submit Another Entry</a>
 
 <h2>request</h2>
-<form class="contact-form" action="usershow.php" method="POST">
- <div class="input-box">
+<form class="contact-form" method="POST">
+    <div class="input-box">
         <label>Your Message:</label>
         <textarea name="message" required></textarea>
     </div>
-  <button type="submit" name="submit">Submit</button>
+    <button type="submit" name="submit">Submit</button>
 </form>
+
+<?php
+if (isset($_POST['submit'])) {
+
+    $conn = new mysqli("localhost", "root", "", "realdb");
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $msg = $_POST['message'];
+
+    $sql = "INSERT INTO requests (message, submitted_at)
+            VALUES ('$msg', NOW())";
+
+    if ($conn->query($sql)) {
+        echo "<p style='color:green; font-size:18px;'>Request submitted successfully!</p>";
+    } else {
+        echo "<p style='color:red;'>Failed to submit request.</p>";
+    }
+}
+?>
+
 
 </body>
 </html>

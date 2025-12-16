@@ -89,10 +89,48 @@ $conn = new mysqli("localhost", "root", "", "admin");
 <a href="logout.php">Logout</a>
 <a href="usershow.php">seller</a>
 <a href="show_messages.php">Contact Messages</a>
+<a href="admindashboard.php?show=requests">User Requests</a>
 
 </div>
 
 <div class="content">
+<?php
+
+if (isset($_GET['show']) && $_GET['show'] == 'requests') {
+
+    $conn = new mysqli("localhost", "root", "", "realdb");
+
+    $result = $conn->query("SELECT * FROM requests ORDER BY id DESC");
+
+    echo "<div class='form-box'>";
+    echo "<h2>User Requests</h2>";
+
+    if ($result->num_rows > 0) {
+
+        echo "<table border='1' cellpadding='10' cellspacing='0' style='width:100%; background:white;'>
+                <tr style='background:#ddd;'>
+                    <th>ID</th>
+                    <th>Message</th>
+                    <th>Submitted At</th>
+                </tr>";
+
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>{$row['id']}</td>
+                    <td>{$row['message']}</td>
+                    <td>{$row['submitted_at']}</td>
+               </tr>";
+        }
+
+        echo "</table>";
+    } else {
+        echo "<p>No requests found.</p>";
+    }
+
+    echo "</div>";
+}
+?>
+
 <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
 
 <div class="form-box">
@@ -148,7 +186,9 @@ if(isset($_POST["update"]))
 
         <label>Location:</label><br>
         <input type="text" name="location" value="<?= $row['location'] ?>"><br><br>
-
+      	
+      	<label>Price:</label><br>
+		<input type="text" name="price" value="<?= $row['price'] ?>"><br><br>      	
         <label>Status:</label><br>
         <select name="status">
             <option <?= ($row['status']=="Available"?"selected":"") ?>>Available</option>
@@ -170,6 +210,7 @@ if(isset($_POST["save_update"]))
     $id = $_POST["id"];
     $type = $_POST["type"];
     $location = $_POST["location"];
+    $price= $_POST['price'];
     $status = $_POST["status"];
 
     $photo_sql = "";
@@ -183,6 +224,7 @@ if(isset($_POST["save_update"]))
     $query = "UPDATE data SET 
                 type='$type',
                 location='$location',
+                price='$price',
                 status='$status'
                 $photo_sql
               WHERE id='$id'";
@@ -213,6 +255,10 @@ if(isset($_POST["showall"])){
 <label>Location:</label>
 <input type="text" name="location" required>
 
+<label>price:</label>
+<input type="text" name="price" required>
+
+
 <label>Status:</label>
 <select name="status">
 <option value="Available">Available</option>
@@ -229,6 +275,7 @@ if(isset($_POST['upload'])){
 
     $type = $_POST['type'];
     $location = $_POST['location'];
+    $price=$_POST['price'];
     $status = $_POST['status'];
 
     $photo_name = $_FILES['photo']['name'];
@@ -238,8 +285,8 @@ if(isset($_POST['upload'])){
 
     if(move_uploaded_file($photo_tmp, $upload_path)){
         
-        $sql = "INSERT INTO data (photo, type, location, status)
-                VALUES ('$photo_name', '$type', '$location', '$status')";
+        $sql = "INSERT INTO data (photo, type, location ,price, status)
+                VALUES ('$photo_name', '$type', '$location','$price', '$status')";
 
         if($conn->query($sql)){
             echo "<script>alert('Uploaded Successfully');</script>";

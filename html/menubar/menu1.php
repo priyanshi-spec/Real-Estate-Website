@@ -99,7 +99,7 @@ nav ul li:hover ul {
 
 <nav>
   
- <img src="../images/logo1.png" class="logo">
+
 
   
   <ul>

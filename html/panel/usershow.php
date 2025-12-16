@@ -63,12 +63,44 @@ if(isset($_POST["delete_request"]))
         button:hover{
             background:#e60000;
         }
+       .sidebar {
+    width: 200px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.sidebar a:hover {
+    background: #444;
+}
     </style>
 </head>
 <body>
 
 <h2 style="text-align:center;">User Uploaded Properties</h2>
+<div class="sidebar">
+<h2>Admin Panel</h2>
+<a href="admindashboard.php">Dashboard</a>
+<a href="show.php">Show All</a>
+<a href="logout.php">Logout</a>
+<a href="usershow.php">seller</a>
+<a href="show_messages.php">Contact Messages</a>
 
+</div>
 <table>
     <tr>
         <th>Name</th>

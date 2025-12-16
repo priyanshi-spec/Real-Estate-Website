@@ -61,7 +61,6 @@
 <h2 class="sell">Sell your house online.</h2>
 <?php include 'panel/user.php';?>
 </figure>
-
 </section>
 </main>
 <footer>
